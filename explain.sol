@@ -62,3 +62,6 @@
 
 // bs-config.json file is used to configure browser sync which lets us to run your app in browser and see the changes in real time
 
+// how to run browser sync ? : npm run dev
+
+// 40 ish. npm dev deosnt work.

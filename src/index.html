@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- for UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- for IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- for mobile -->
+
+    <title>To Do List</title>
+    <!-- title -->
+
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap css, twitter framework -->
+
+    <style>
+      main {
+        margin-top: 60px; /* add some space between the navbar and the content */
+      }
+
+      #content {
+        display: none; /* hide content until we have loaded it */
+      }
+
+      form {
+        width: 350px; /* set the width of the form */
+        margin-bottom: 10px; /* add some space between the form and the list */
+      }
+
+      ul {
+        margin-bottom: 0px; /* remove the default bottom margin */
+      }
+
+      #completedTaskList .content {
+        color: goldenrod;
+        text-decoration: line-through; /* add a line through completed tasks */
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow"
+      id="navbar"
+    >
+      <!-- navbar -->
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">To Do List</a>
+      <!-- navbar title -->
+      <ul class="navbar-nav px-3">
+        <!-- navbar items -->
+        <li class="nav-item text-nowrap d-none d-sm-none d-sm-black">  <!-- d-sm-none d-sm-block -->
+          <small
+            ><a class="nav-link" href="#"><span id="account"></span></a  <!-- account -->
+          ></small>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid">  <!-- container -->
+      <div class="row">
+        <main role="main" class="col-lg-12 d-flex justify-content-center">  <!-- main -->
+          <div id="loader" class="text-center"> <!-- loader -->
+            <p class="text-center">Loading...</p>  <!-- loading -->
+          </div>
+          <div id="content">
+            <form onSubmit="App.createTask(); return false;">  <!-- form --------------------------------------> 
+              <input 
+                id="newTask" 
+                type="text"
+                class="form-control"
+                placeholder="Add task..."
+                required
+              />
+              <input type="submit" hidden="" />  <!-- submit -->
+            </form>
+            <ul id="taskList" class="list-unstyled">  <!-- task list ----------------------------------->
+              <div class="taskTemplate" class="checkbox" style="display: none">  <!-- task template -->
+                <label>
+                  <input type="checkbox" />  <!-- checkbox -->
+                  <span class="content">Task content goes here...</span>  <!-- task content -->
+                </label>
+              </div>
+            </ul>
+            <ul id="completedTaskList" class="list-unstyled"></ul>  <!-- completed task list ---------------->
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- all compiled plugins -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
