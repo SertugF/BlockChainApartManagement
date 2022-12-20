@@ -1,4 +1,4 @@
-const ToDoList = artifacts.require("ToDoList");
+const ToDoList = artifacts.require("./ToDoList");
 
 module.exports = function (deployer) {
   deployer.deploy(ToDoList);

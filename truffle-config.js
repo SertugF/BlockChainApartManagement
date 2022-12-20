@@ -1,4 +1,5 @@
 module.exports = {
+  //might need to change this to export default
   networks: {
     development: {
       host: "127.0.0.1",

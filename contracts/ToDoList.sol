@@ -13,7 +13,7 @@ contract ToDoList{
     mapping (uint => Task) public tasks; // create hash. key is uint, value is Task struct(id and task content)
 
     constructor() {
-        createTask("GG1"); // create task with content GG1
+        createTask("GG1 inside constructor"); // create task with content GG1
     }
 
     function createTask(string memory _content) public {
