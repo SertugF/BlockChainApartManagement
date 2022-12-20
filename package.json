@@ -13,13 +13,13 @@
   "author": "e-mail adresi eklenecek",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap": "^4.3.1",
-    "chai": "^4.2.0",
+    "bootstrap": "^4.6.2",
+    "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "chai-bignumber": "^3.0.0",
-    "lite-server": "^2.2.0",
+    "chai-bignumber": "^2.0.2",
+    "lite-server": "^2.3.0",
     "nodemon": "^2.0.20",
-    "truffle": "^5.1.14",
+    "truffle": "^5.1.65",
     "truffle-contract": "^3.0.8"
   }
 }
